@@ -10,9 +10,7 @@ configuration to load into the firmware file.
 for auto choose in file UnifiedConfiguration.py set proper number to
 
 101:     choice = 3	#input()
-
 or leave as is
-
 101:	choice = input()
 
 ##### Some photos
