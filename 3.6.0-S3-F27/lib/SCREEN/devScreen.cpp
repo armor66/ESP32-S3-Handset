@@ -112,7 +112,11 @@ static int handle(void)
             break;
         case INPUT_KEY_OK_PRESS:
             fsm_event = EVENT_ENTER;
-            if(handset->IsArmed()) digitalWrite(GPIO_PIN_TFT_BL, 0);
+            if(handset->IsArmed())
+            {
+                screen_on = false;
+                digitalWrite(GPIO_PIN_TFT_BL, 0);
+            }
             break;
         default: // INPUT_KEY_NO_PRESS
             fsm_event = EVENT_TIMEOUT;
