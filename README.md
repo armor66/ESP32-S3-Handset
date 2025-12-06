@@ -4,4 +4,4 @@ ESP32-S3 based ExpressLRS Handset.
 
 ![module photo](Docs/photo_1.jpg)
 
-![module photo](Docs/photo_1.jpg)
+![module photo](Docs/photo_2.jpg)
