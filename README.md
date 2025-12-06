@@ -1,4 +1,4 @@
-ESP32-S3 based ExpressLRS Handset.
+ESP32-S3 based ExpressLRS Handset. Tested with G-NiceRF LORA1280F27-TCXO.
 
 Do not use ESP32-S3 with Octal SPI PSRAM, due to it occupies GPIO35~37.
 
