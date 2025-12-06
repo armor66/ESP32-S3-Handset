@@ -7,7 +7,7 @@ Use target Unified_ESP32_2400_TX_via_UART.
 Choose one of the 2) RunCam ESP32-S3 E28 TX, or 3) RunCam ESP32-S3 F27 TX 
 configuration to load into the firmware file.
 
-for auto choose in file UnifiedConfiguration.py set proper number to
+For auto choose in file UnifiedConfiguration.py set proper number to
 
 101:     choice = 3	#input()
 or leave as is
