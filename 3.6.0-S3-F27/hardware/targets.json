@@ -1,0 +1,125 @@
+{
+    "axis": {
+        "name": "Axisflying",
+        "tx_2400": {
+            "thor": {
+                "product_name": "AXIS Thor 2.4GHz TX",
+                "lua_name": "AXIS THOR 2400TX",
+                "layout_file": "AXIS Thor 2400.json",
+                "logo_file": "axis_tft.bin",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.0.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_TX",
+                "prior_target_name": "AXIS_THOR_2400_TX"
+            }
+        }
+    },
+    "diy": {
+        "name": "DIY devices",
+        "tx_2400": {
+            "e28": {
+                "product_name": "DIY ESP32 E28 2.4GHz TX",
+                "lua_name": "DIY2400 E28",
+                "layout_file": "DIY 2400 E28.json",
+                "features": ["fan"],
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.0.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_TX",
+                "prior_target_name": "DIY_2400_TX_ESP32_SX1280_E28"
+            },
+            "f27": {
+                "product_name": "DIY ESP32 F27 2.4GHz TX",
+                "lua_name": "DIY2400 F27",
+                "layout_file": "DIY 2400 F27.json",
+                "features": ["fan"],
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.0.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_TX",
+                "prior_target_name": "DIY_2400_TX_ESP32_SX1280_LORA1280F27"
+            },
+            "ble": {
+                "product_name": "DIY ESP32 BLE Joystick TX",
+                "lua_name": "DIY BLE Joystick",
+                "layout_file": "DIY 2400 BLE Joystick.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.0.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_TX",
+                "prior_target_name": "DIY_BLE_JOYSTICK"
+            },
+            "true_diversity_pwm16_s3": {
+                "product_name": "DIY ESP32-S3 DevKit Gemini 2.4Ghz TX ",
+                "lua_name": "Gemini S3 2G4",
+                "layout_file": "DIY S3 DEVKIT 2400 Gemini.json",
+                "upload_methods": ["uart", "wifi", "etx"],
+                "min_version": "3.4.0",
+                "platform": "esp32-s3",
+                "firmware": "Unified_ESP32S3_2400_TX"
+            }
+        }
+    },
+    "generic": {
+        "name": "Generic targets used as a base",
+        "tx_2400": {
+            "dupletx": {
+                "product_name": "Generic Full-duplex 2.4GHz TX",
+                "lua_name": "DupleTX",
+                "layout_file": "DIY 2400 DupleTX.json",
+                "upload_methods": ["uart", "wifi", "etx"],
+                "min_version": "3.0.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_TX",
+                "prior_target_name": "DIY_2400_TX_DUPLETX"
+            },
+            "gemini": {
+                "product_name": "Generic ESP32 2.4Ghz Gemini TX",
+                "lua_name": "Gemini 2.4TX",
+                "layout_file": "Generic 2400 Gemini.json",
+                "upload_methods": ["uart", "wifi", "etx"],
+                "min_version": "3.2.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_TX",
+                "prior_target_name": "DIY_2400_TX_GEMINI"
+            }
+        },
+        "tx_dual": {
+            "gemini": {
+                "product_name": "Gemini XrossBand 2.4/900 TX",
+                "lua_name": "GemX TX",
+                "layout_file": "Generic LR1121 Gemini.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }
+        }
+    },
+    "runcam": {
+        "name": "RunCam",
+        "tx_2400": {
+            "runcam_e28": {
+                "product_name": "RunCam ESP32-S3 E28 TX",
+                "lua_name": "RunCam 2G4",
+                "layout_file": "RunCam 2400 E28.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.5.0",
+                "logo_file": "runcam_tft.bin",
+                "platform": "esp32-s3",
+                "firmware": "Unified_ESP32S3_2400_TX"
+            },
+            "runcam_f27": {
+                "product_name": "RunCam ESP32-S3 F27 TX",
+                "lua_name": "RunCam 2G4",
+                "layout_file": "RunCam 2400 F27.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.5.0",
+                "logo_file": "runcam_tft.bin",
+                "platform": "esp32-s3",
+                "firmware": "Unified_ESP32S3_2400_TX"
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "serial_rx":44,
+    "serial_tx":43,
+
+    "radio_busy": 3,
+    "radio_dio1": 9,
+    "radio_miso": 13,
+    "radio_mosi": 11,
+    "radio_nss": 10,
+    "radio_rst": 14,
+    "radio_sck": 12,
+    "power_rxen": 46,
+    "power_txen": 8,
+    
+    "screen_dc":    39,
+    "screen_rst":   38,
+    "screen_cs":    37,
+    "screen_sck":   36,
+    "screen_mosi":  35,
+ 
+    "screen_bl": 40,
+    "screen_type": 4,
+    "screen_reversed": 1,
+    
+    "five_way1": 19,
+    "five_way2": 20,
+    "five_way3": 21,
+    
+    "power_lna_gain": 12,
+    "power_min": 0,
+    "power_high": 5,
+    "power_max": 5,
+    "power_default": 2,
+    "power_control": 0,
+    "power_values": [-15,-11,-8,-5,-2,1],
+    
+    "radio_dcdc": false,
+    
+    "use_backpack": false,
+    "debug_backpack_baud": 115200,
+    "debug_backpack_rx": 44,
+    "debug_backpack_tx": 43,
+
+    "vbat":         18,
+    "vbat_offset": -197,
+    "vbat_scale": 347,
+
+    "adc_t_ch":     0,
+    "adc_r_ch":     1,
+    "adc_a_ch":     4,
+    "adc_e_ch":     5
+  }
+  
