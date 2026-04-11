@@ -50,7 +50,7 @@ static inline uint8_t ICACHE_RAM_ATTR HybridWideNonceToSwitchIndex(uint8_t const
     return ((nonce & 0b111) + ((nonce >> 3) & 0b1)) % 8;
 }
 
-#if defined(TARGET_TX) || defined(UNIT_TEST)
+//my@ #if defined(TARGET_TX) || defined(UNIT_TEST)
 
 #include "handset.h"            // need access to handset data for arming
 
@@ -119,9 +119,9 @@ static void ICACHE_RAM_ATTR PackChannelDataHybridCommon(OTA_Packet4_s * const ot
 
     // send armed status to receiver
 //my@    #if defined(UNIT_TEST)
-    ota4->rc.isArmed = CRSF_to_BIT(channelData[4]);
+//    ota4->rc.isArmed = CRSF_to_BIT(channelData[4]);
 //my@    #else
-//    ota4->rc.isArmed = handset->IsArmed();
+    ota4->rc.isArmed = handset->IsArmed();
 //    #endif
 #endif /* !DEBUG_RCVR_LINKSTATS */
 }
@@ -223,9 +223,9 @@ static void ICACHE_RAM_ATTR GenerateChannelData8ch12ch(OTA_Packet8_s * const ota
     ota8->rc.isHighAux = isHighAux;
     // send armed status to receiver
 //my@    #if defined(UNIT_TEST)
-    ota8->rc.isArmed = CRSF_to_BIT(channelData[4]);
+//    ota8->rc.isArmed = CRSF_to_BIT(channelData[4]);
 //my@    #else
-//    ota8->rc.isArmed = handset->IsArmed();
+    ota8->rc.isArmed = handset->IsArmed();
 //    #endif
 #if defined(DEBUG_RCVR_LINKSTATS)
     // Incremental packet counter for verification on the RX side, 32 bits shoved into CH1-CH4
@@ -280,7 +280,7 @@ static void ICACHE_RAM_ATTR GenerateChannelData12ch(OTA_Packet_s * const otaPktP
     GenerateChannelData8ch12ch((OTA_Packet8_s * const)otaPktPtr, channelData, stubbornAck, FullResIsHighAux);
     FullResIsHighAux = !FullResIsHighAux;
 }
-#endif
+//my@ #endif
 
 
 #if TARGET_RX || defined(UNIT_TEST)

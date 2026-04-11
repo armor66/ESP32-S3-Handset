@@ -8,6 +8,7 @@
 #include "config.h" //?
 #include <driver/adc.h>
 #include <driver/gpio.h>
+#include "handset.h"
 
 #define CHANNELS            4
 #define SAMPLES             4
@@ -55,6 +56,7 @@ const static uint32_t MAX_OUT = 1811;
 const static uint32_t MID_OUT =  992;
 const static uint32_t MIN_OUT =  172;
 bool calibrated = false;    //get true after config.Load() only
+bool handsetArmed = false;
 
 void endPointsCalibration(void)
 {
@@ -355,7 +357,8 @@ static int getChannelValues()   //should takes within 1mS
     {
         (ChannelData[2] > 220)? permitArming = false: permitArming = true;
     }
-    (!gpio_get_level(GPIO_NUM_0) && permitArming)? ChannelData[4] = 1812: ChannelData[4] = 172;
+    (!gpio_get_level(GPIO_NUM_0) && permitArming)? handsetArmed = true: handsetArmed = false;
+    handset->SetArmed(handsetArmed);
     // gpio_get_level(GPIO_NUM_0)? ChannelData[4] = 172: ChannelData[4] = 1812;
 /*right 2-pos switch*/
     gpio_get_level(GPIO_NUM_17)? ChannelData[5] = 172: ChannelData[5] = 1812;

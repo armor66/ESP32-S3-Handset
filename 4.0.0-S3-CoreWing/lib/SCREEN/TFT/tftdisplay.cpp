@@ -70,7 +70,7 @@ constexpr uint16_t elrs_banner_bgColor[] = {
 };
 
 #define SCREEN_X    160
-#define SCREEN_Y    95  //my@    80
+#define SCREEN_Y    96  //my@    80
 
 #define SCREEN_SMALL_FONT_SIZE      8
 #define SCREEN_SMALL_FONT           Pragma_Sans36pt7b
@@ -150,7 +150,7 @@ void TFTDisplay::init()
     bus = new Arduino_ESP32SPI(GPIO_PIN_SCREEN_DC, GPIO_PIN_SCREEN_CS, GPIO_PIN_SCREEN_SCK, GPIO_PIN_SCREEN_MOSI, GFX_NOT_DEFINED, HSPI);
     // gfx = new Arduino_ST7735(bus, GPIO_PIN_SCREEN_RST, OPT_SCREEN_REVERSED ? 3 : 1 /* rotation */, true , 80, 160, 26, 1, 26, 1);
     // gfx = new Arduino_ST7735(bus, GPIO_PIN_SCREEN_RST, OPT_SCREEN_REVERSED ? 3 : 1 /* rotation */, false , 95, 160, 19, 1, 19, 1);
-    gfx = new Arduino_NV3023(bus, GPIO_PIN_SCREEN_RST, OPT_SCREEN_REVERSED ? 1 : 3 /* rotation */, true , 95, 160, 17, 0, 17, 0);
+    gfx = new Arduino_NV3023(bus, GPIO_PIN_SCREEN_RST, OPT_SCREEN_REVERSED ? 1 : 3 /* rotation */, true , 96, 160, 16, 0, 16, 0);
 
     gfx->begin();
     doScreenBackLight(SCREEN_BACKLIGHT_ON);
