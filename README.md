@@ -2,7 +2,7 @@ ESP32-S3 based ExpressLRS Handset. Tested with G-NiceRF LORA1280F27-TCXO.
 
 Do not use ESP32-S3 with Octal SPI PSRAM, due to it occupies GPIO35~37.
 
-Use target Unified_ESP32_2400_TX_via_UART.
+Use target Unified_ESP32S3_2400_TX_via_UART.
 
 Choose one of the 2) RunCam ESP32-S3 E28 TX, or 3) RunCam ESP32-S3 F27 TX 
 configuration to load into the firmware file.
