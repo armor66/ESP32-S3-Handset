@@ -1,4 +1,4 @@
-4.0.0-S3-xLite firmware is ESP32-S3 based ExpressLRS Handset. 
+4.0.0-S3-xLite firmware is ESP32-S3 based [ExpressLRS](https://github.com/ExpressLRS/ExpressLRS/releases) Handset . 
 Applied gimbal calibration, model matching and all regular "Tx Module" menu options,
  Link Quality, Telemetry and raw calibrated values screen, auto screen off when Armed
  and buzzer notification Rx battery Low, based on model number divider.
