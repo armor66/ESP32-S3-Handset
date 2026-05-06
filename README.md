@@ -1,10 +1,10 @@
-4.0.0-S3-xLite ESP32-S3 based ExpressLRS Handset. 
+4.0.0-S3-xLite firmware is ESP32-S3 based ExpressLRS Handset. 
 Applied gimbal calibration, model matching and all regular "Tx Module" menu options,
  Link Quality, Telemetry and raw calibrated values screen, auto acreen off when Armed
  and buzzer notification Rx battery Low, based on model number divider.
-Tested with G-NiceRF LORA1280F27-TCXO, ESP32-S3 Development Board N8R2.
-Do not use ESP32-S3 with Octal SPI PSRAM, due to it occupies GPIO35~37. 
-Also WeAct S3 ESP32S3-H4R2-MINI board can utilise GPIO33 and GPIO34 for another encoder or 3-position switch.
+Tested with G-NiceRF LORA1280F27-TCXO, ESP32-S3 Development Board N8R2
+(do not use ESP32-S3 with Octal SPI PSRAM, due to it occupies GPIO33~37). 
+Also WeAct S3 ESP32S3-H4R2-MINI board allows utilise additional GPIO33 and GPIO34 for another encoder or 3-position switch.
 
 Build "Unified_ESP32_S3_2400_TX_Via_UART", choose "CoreWing Sirius 2.4GHz TX" configuration.
 Die to CoreWing 2400.json, GPIO18 - ADC battery pin, GPIO15, 16(instead of right 3-position switch) and 6 - encoder,
