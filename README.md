@@ -11,7 +11,7 @@ Die to CoreWing 2400.json, GPIO18 - ADC battery pin, GPIO15, 16(instead of right
  GPIO43(backpackTx) connected to pin 3 ESP32-C3-SuperMini,
  flashed with [BLE Telemetry Lite](https://github.com/BushlanovDev/ble-telemetry-lite/releases),
  that gets support [TelemetryViewer](https://github.com/RomanLut/android-taranis-smartport-telemetry/releases). 
-Encoder has 32 rotation click entire ch8 range, button double click returns it to the middle position. 
+Encoder(SIQ-02FVS3) has 32 rotation click entire ch8 range, button double click returns it to the middle position. 
 Also encoder button switches ch9 "Button Left", as well as GPIO7 ch10 "Button Right"
 Other ADC(ch1-ch4), swithes(ch5-ch7) are described in lib/ADC/devADC.cpp, power and buzzer behavior in lib/AnalogVbat/devAnalogVbat.cpp.
 Arming not allowed when receiver not connected(and model matched) or throttle not at zero position.
