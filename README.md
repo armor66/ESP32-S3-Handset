@@ -1,6 +1,6 @@
 4.0.0-S3-xLite firmware is ESP32-S3 based ExpressLRS Handset. 
 Applied gimbal calibration, model matching and all regular "Tx Module" menu options,
- Link Quality, Telemetry and raw calibrated values screen, auto acreen off when Armed
+ Link Quality, Telemetry and raw calibrated values screen, auto screen off when Armed
  and buzzer notification Rx battery Low, based on model number divider.
 Tested with G-NiceRF LORA1280F27-TCXO, ESP32-S3 Development Board N8R2
 (do not use ESP32-S3 with Octal SPI PSRAM, due to it occupies GPIO33~37). 
@@ -14,6 +14,7 @@ Die to CoreWing 2400.json, GPIO18 - ADC battery pin, GPIO15, 16(instead of right
 Encoder has 32 rotation click entire ch8 range, button double click returns it to the middle position. 
 Also encoder button switches ch9 "Button Left", as well as GPIO7 ch10 "Button Right"
 Other ADC(ch1-ch4), swithes(ch5-ch7) are described in lib/ADC/devADC.cpp, power and buzzer behavior in lib/AnalogVbat/devAnalogVbat.cpp.
+Arming not allowed when receiver not connected(and model matched) or throttle not at zero position.
 In lib/SCREEN/TFT/tftdisplay.cpp implemented some color/size tricks for ST7735S(blue board) 160x128 display.
 
 For 3.6.0-S3-F27 use target Unified_ESP32S3_2400_TX_via_UART.
