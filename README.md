@@ -7,7 +7,7 @@ Tested with G-NiceRF LORA1280F27-TCXO, ESP32-S3 Development Board N8R2
 Also WeAct S3 ESP32S3-H4R2-MINI board allows utilise additional GPIO33 and GPIO34 for another encoder or 3-position switch.
 
 Build "Unified_ESP32_S3_2400_TX_Via_UART" target, choose "CoreWing Sirius 2.4GHz TX" configuration.
-Die to CoreWing 2400.json, GPIO18 - ADC battery pin, GPIO15, 16(instead of right 3-position switch) and 6(button) - encoder,
+Due to CoreWing 2400.json, GPIO18 - ADC battery pin, GPIO15, 16(instead of right 3-position switch) and 6(button) - encoder,
  GPIO43(backpackTx) connected to pin 3 ESP32-C3-SuperMini,
  flashed with [BLE Telemetry Lite](https://github.com/BushlanovDev/ble-telemetry-lite/releases),
  that gives support [TelemetryViewer](https://github.com/RomanLut/android-taranis-smartport-telemetry/releases). 
