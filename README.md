@@ -34,7 +34,7 @@ or leave as is
 
 ![module photo](Docs/Link.jpg)
 
-![module photo](Docs/Telemetry.jpg)
+![module photo](Docs/Telemetry.png)
 
 ![module photo](Docs/InSide.jpg)
 
