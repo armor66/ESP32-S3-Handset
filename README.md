@@ -30,6 +30,13 @@ or leave as is
 
 ##### Some photos
 
-![module photo](Docs/photo_1.jpg)
+![module photo](Docs/UpSide.jpg)
 
-![module photo](Docs/photo_2.jpg)
+![module photo](Docs/Link.jpg)
+
+![module photo](Docs/Telemetry.jpg)
+
+![module photo](Docs/InSide.jpg)
+
+![module photo](Docs/Charging.jpg)
+
