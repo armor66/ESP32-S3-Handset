@@ -444,65 +444,6 @@ void TFTDisplay::displaySending()
                         "SENDING...", ST7735_CYAN, BKGRND);  //ST7735_YELLOW
 }
 
-// void TFTDisplay::displayLinkstats()
-// {
-//     constexpr int16_t LINKSTATS_COL_FIRST   = 0;
-//     constexpr int16_t LINKSTATS_COL_SECOND  = 30;
-//     constexpr int16_t LINKSTATS_COL_THIRD   = 100;
-
-//     constexpr int16_t LINKSTATS_ROW_FIRST   = 10;
-//     constexpr int16_t LINKSTATS_ROW_SECOND  = 25;
-//     constexpr int16_t LINKSTATS_ROW_THIRD   = 40;
-//     constexpr int16_t LINKSTATS_ROW_FOURTH  = 55;
-//     constexpr int16_t LINKSTATS_ROW_FIFTH   = 70;
-
-//     gfx->fillScreen(WHITE);
-//     gfx->setFont(&SCREEN_SMALL_FONT);
-//     gfx->setTextColor(BLACK, WHITE);
-
-//     gfx->setCursor(LINKSTATS_COL_FIRST, LINKSTATS_ROW_SECOND);
-//     gfx->print("LQ");
-//     gfx->setCursor(LINKSTATS_COL_FIRST, LINKSTATS_ROW_THIRD);
-//     gfx->print("RSSI");
-//     gfx->setCursor(LINKSTATS_COL_FIRST, LINKSTATS_ROW_FOURTH);
-//     gfx->print("SNR");
-//     gfx->setCursor(LINKSTATS_COL_FIRST, LINKSTATS_ROW_FIFTH);
-//     gfx->print("Ant");
-
-//     // Uplink Linkstats
-//     gfx->setCursor(LINKSTATS_COL_SECOND, LINKSTATS_ROW_FIRST);
-//     gfx->print("Uplink");
-//     gfx->setCursor(LINKSTATS_COL_SECOND, LINKSTATS_ROW_SECOND);
-//     gfx->print(linkStats.uplink_Link_quality);
-//     gfx->setCursor(LINKSTATS_COL_SECOND, LINKSTATS_ROW_THIRD);
-//     gfx->print((int8_t)linkStats.uplink_RSSI_1);
-//     if (linkStats.uplink_RSSI_2 != 0)
-//     {
-//         gfx->print('/');
-//         gfx->print((int8_t)linkStats.uplink_RSSI_2);
-//     }
-
-//     gfx->setCursor(LINKSTATS_COL_SECOND, LINKSTATS_ROW_FOURTH);
-//     gfx->print(linkStats.uplink_SNR);
-//     gfx->setCursor(LINKSTATS_COL_SECOND, LINKSTATS_ROW_FIFTH);
-//     gfx->print(linkStats.active_antenna);
-
-//     // Downlink Linkstats
-//     gfx->setCursor(LINKSTATS_COL_THIRD, LINKSTATS_ROW_FIRST);
-//     gfx->print("Downlink");
-//     gfx->setCursor(LINKSTATS_COL_THIRD, LINKSTATS_ROW_SECOND);
-//     gfx->print(linkStats.downlink_Link_quality);
-//     gfx->setCursor(LINKSTATS_COL_THIRD, LINKSTATS_ROW_THIRD);
-//     gfx->print((int8_t)linkStats.downlink_RSSI_1);
-//     if (isDualRadio())
-//     {
-//         gfx->print('/');
-//         gfx->print((int8_t)linkStats.downlink_RSSI_2);
-//     }
-
-//     gfx->setCursor(LINKSTATS_COL_THIRD, LINKSTATS_ROW_FOURTH);
-//     gfx->print(linkStats.downlink_SNR);
-// }
 //my@ #endif
 void TFTDisplay::displayLinkstats()
 {
@@ -534,20 +475,20 @@ void TFTDisplay::displayLinkstats()
 
     gfx->setTextColor(ST7735_CYAN,BKGRND);
     // Uplink Linkstats
-    gfx->setCursor(LINKSTATS_COL_SECOND-4, LINKSTATS_ROW_FIRST);
-    gfx->print("Uplink");
+    gfx->setCursor(LINKSTATS_COL_SECOND-8, LINKSTATS_ROW_FIRST);
+    gfx->print("Downlink"); //("Uplink");
     gfx->setCursor(LINKSTATS_COL_SECOND, LINKSTATS_ROW_SECOND);
-    gfx->print(linkStats.uplink_Link_quality);                //(CRSF::LinkStatistics.uplink_Link_quality);
+    gfx->print(linkStats.downlink_Link_quality);                //(CRSF::LinkStatistics.uplink_Link_quality);
     gfx->setCursor(LINKSTATS_COL_SECOND-8, LINKSTATS_ROW_THIRD);
-    gfx->print((int8_t)linkStats.uplink_RSSI_1);              //((int8_t)CRSF::LinkStatistics.uplink_RSSI_1);
+    gfx->print((int8_t)linkStats.downlink_RSSI_1);              //((int8_t)CRSF::LinkStatistics.uplink_RSSI_1);
     if (isDualRadio())                                          //(CRSF::LinkStatistics.uplink_RSSI_2 != 0)
     {
         gfx->print('/');
-        gfx->print((int8_t)linkStats.uplink_RSSI_2);          //((int8_t)CRSF::LinkStatistics.uplink_RSSI_2);
+        gfx->print((int8_t)linkStats.downlink_RSSI_2);          //((int8_t)CRSF::LinkStatistics.uplink_RSSI_2);
     }
 
     gfx->setCursor(LINKSTATS_COL_SECOND, LINKSTATS_ROW_FOURTH);
-    gfx->print(linkStats.uplink_SNR);                           //(CRSF::LinkStatistics.uplink_SNR);
+    gfx->print(linkStats.downlink_SNR);                           //(CRSF::LinkStatistics.uplink_SNR);
     gfx->setCursor(LINKSTATS_COL_SECOND, LINKSTATS_ROW_FIFTH);
     gfx->print(linkStats.active_antenna);                       //(CRSF::LinkStatistics.active_antenna);
     gfx->setCursor(LINKSTATS_COL_SECOND, LINKSTATS_ROW_SIXTH);
@@ -577,20 +518,20 @@ void TFTDisplay::displayLinkstats()
 
     gfx->setTextColor(GREEN,BKGRND);
     // Downlink Linkstats
-    gfx->setCursor(LINKSTATS_COL_THIRD-8, LINKSTATS_ROW_FIRST);
-    gfx->print("Downlink");
+    gfx->setCursor(LINKSTATS_COL_THIRD-4, LINKSTATS_ROW_FIRST);
+    gfx->print("Uplink");   //("Downlink");
     gfx->setCursor(LINKSTATS_COL_THIRD, LINKSTATS_ROW_SECOND);
-    gfx->print(linkStats.downlink_Link_quality);                //(CRSF::LinkStatistics.downlink_Link_quality);
+    gfx->print(linkStats.uplink_Link_quality);                //(CRSF::LinkStatistics.downlink_Link_quality);
     gfx->setCursor(LINKSTATS_COL_THIRD-8, LINKSTATS_ROW_THIRD);
-    gfx->print((int8_t)linkStats.downlink_RSSI_1);              //((int8_t)CRSF::LinkStatistics.downlink_RSSI_1);
+    gfx->print((int8_t)linkStats.uplink_RSSI_1);              //((int8_t)CRSF::LinkStatistics.downlink_RSSI_1);
     if (isDualRadio())
     {
         gfx->print('/');
-        gfx->print((int8_t)linkStats.downlink_RSSI_2);          //((int8_t)CRSF::LinkStatistics.downlink_RSSI_2);
+        gfx->print((int8_t)linkStats.uplink_RSSI_2);          //((int8_t)CRSF::LinkStatistics.downlink_RSSI_2);
     }
 
     gfx->setCursor(LINKSTATS_COL_THIRD, LINKSTATS_ROW_FOURTH);
-    gfx->print(linkStats.downlink_SNR);                         //(CRSF::LinkStatistics.downlink_SNR);
+    gfx->print(linkStats.uplink_SNR);                         //(CRSF::LinkStatistics.downlink_SNR);
     gfx->setCursor(LINKSTATS_COL_THIRD, LINKSTATS_ROW_FIFTH);
     gfx->print("Model");    //(config.GetModelMatch_ST());
     gfx->setCursor(LINKSTATS_COL_THIRD, LINKSTATS_ROW_SIXTH);
